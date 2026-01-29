@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Catholic Craft</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    body {
+      background: #e6e6e6;
+    }
+
+    .container {
+      max-width: 430px;
+      margin: auto;
+      background: #f4f4f4;
+      min-height: 100vh;
+    }
+
+    /* HEADER */
+    header {
+      background: #7a3f14;
+      width: 320px 500px; 
+      padding: 1px;
+      text-align: center;
+    }
+
+    header img {
+      max-width: 100%;
+    }
+
+    /* HERO */
+    .hero {
+      background: url('https://i.postimg.cc/3wjtz9Fg/Design-sem-nome.png') center/cover no-repeat;
+      padding: 40px 20px;
+      text-align: center;
+      color: #fff;
+    }
+
+    .hero .overlay {
+      background: rgba(0, 0, 0, 0.45);
+      padding: 20px;
+      border-radius: 12px;
+    }
+
+    .logo {
+        padding: 5px;
+    }
+
+    .hero p {
+      font-size: 1.1rem;
+      line-height: 1.5;
+    }
+
+    /* CARD */
+    .card {
+      background: #7a3f14;
+      margin: 20px;
+      padding: 25px 20px;
+      border-radius: 20px;
+      text-align: center;
+      color: #fff;
+    }
+
+    .card h2 {
+      font-size: 2rem;
+      margin-bottom: 15px;
+    }
+
+    .card p {
+      font-size: 1.2rem;
+      margin-bottom: 20px;
+    }
+
+    /* IP BOX */
+    .ip-box {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border: 2px solid #fff;
+      border-radius: 30px;
+      padding: 10px 15px;
+      margin-bottom: 15px;
+    }
+
+    .ip-box span {
+      font-size: 0.95rem;
+      overflow-wrap: anywhere;
+    }
+
+    .copy-btn {
+      background: transparent;
+      border: none;
+      color: #fff;
+      font-size: 1.3rem;
+      cursor: pointer;
+    }
+
+    /* PORT */
+    .port {
+      border: 2px solid #fff;
+      border-radius: 30px;
+      padding: 10px 20px;
+      display: inline-block;
+      font-size: 1.1rem;
+      margin-top: 10px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 15px;
+      font-size: 0.8rem;
+      color: #555;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+
+    <header>
+      <img class="logo" src="https://i.postimg.cc/76W0RTd4/craftpng-Photoroom.png" alt="Catholic Craft Logo" />
+    </header>
+
+    <section class="hero">
+      <div class="overlay">
+        <p>
+          É lindo ser católico, e sabe o que é lindo também?<br />
+          Soltar a sua criatividade para construir coisas católicas
+        </p>
+      </div>
+    </section>
+
+    <section class="card">
+      <h2>Catholic Craft</h2>
+      <p>IP (Bedrock)</p>
+
+      <div class="ip-box">
+        <span id="ip">catholiccraft.playserver.pro</span>
+        <button class="copy-btn" onclick="copiarIP()">📋</button>
+      </div>
+
+      <div class="port">107090</div>
+    </section>
+
+    <footer>
+      © 2026 Catholic Craft – Todos os direitos reservados
+    </footer>
+
+  </div>
+
+  <script>
+    function copiarIP() {
+      const ip = document.getElementById('ip').innerText;
+      navigator.clipboard.writeText(ip).then(() => {
+        alert('IP copiado com sucesso!');
+      });
+    }
+  </script>
+
+</body>
+</html>
